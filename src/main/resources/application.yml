@@ -8,30 +8,30 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: Order
+        - id: admin19-sk-order
           uri: http://localhost:8081
           predicates:
             - Path=/orders/**,/orderStates/**
-        - id: teamc-delivery
+        - id: admin19-sk-delivery2
           uri: http://localhost:8082
           predicates:
-            - Path=/deliveries/** 
-        - id: teamc-check
+            - Path=/deliveries/**
+        - id: admin19-sk-check
           uri: http://localhost:8083
           predicates:
-            - Path=/checks/** 
-        - id: teamc-product
+            - Path=/checks/**
+        - id: admin19-sk-product
           uri: http://localhost:8084
           predicates:
-            - Path=/products/** 
-        - id: Payment
+            - Path=/products/**
+        - id: admin19-sk-payment
           uri: http://localhost:8085
           predicates:
-            - Path=/payments/** 
-        - id: teamc-notify
+            - Path=/payments/**
+        - id: admin19-sk-notify1
           uri: http://localhost:8086
           predicates:
-            - Path= 
+            - Path=
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -52,29 +52,29 @@ spring:
     gateway:
       routes:
         - id: Order
-          uri: http://Order:8080
+          uri: http://admin19-sk-order:8080
           predicates:
             - Path=/orders/**,/orderStates/**
         - id: Delivery
-          uri: http://teamc-delivery:8080
+          uri: http://admin19-sk-delivery2:8080
           predicates:
-            - Path=/deliveries/** 
+            - Path=/deliveries/**
         - id: Check
-          uri: http://teamc-check:8080
+          uri: http://admin19-sk-check:8080
           predicates:
-            - Path=/checks/** 
+            - Path=/checks/**
         - id: Product
-          uri: http://teamc-product:8080
+          uri: http://admin19-sk-product:8080
           predicates:
-            - Path=/products/** 
+            - Path=/products/**
         - id: Payment
-          uri: http://Payment:8080
+          uri: http://admin19-sk-payment:8080
           predicates:
-            - Path=/payments/** 
+            - Path=/payments/**
         - id: Notify
-          uri: http://teamc-notify:8080
+          uri: http://admin19-sk-notify1:8080
           predicates:
-            - Path= 
+            - Path=
       globalcors:
         corsConfigurations:
           '[/**]':
