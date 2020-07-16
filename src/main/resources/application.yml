@@ -33,9 +33,9 @@ spring:
           predicates:
             - Path=
         - id: admin19-sk-satisfaction
-            uri: http://localhost:8087
-            predicates:
-              - Path=/satisfactions/**
+          uri: http://localhost:8087
+          predicates:
+            - Path=/satisfactions/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -80,9 +80,9 @@ spring:
           predicates:
             - Path=
         - id: Satisfaction
-            uri: http://admin19-sk-satisfaction:8080
-            predicates:
-              - Path=/satisfactions/**
+          uri: http://admin19-sk-satisfaction:8080
+          predicates:
+            - Path=/satisfactions/**
       globalcors:
         corsConfigurations:
           '[/**]':
