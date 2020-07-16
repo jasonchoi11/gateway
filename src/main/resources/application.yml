@@ -36,6 +36,10 @@ spring:
           uri: http://localhost:8087
           predicates:
             - Path=/satisfactions/**
+        - id: admin19-sk-call
+          uri: http://localhost:8088
+          predicates:
+            - Path=/calls/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -83,6 +87,10 @@ spring:
           uri: http://admin19-sk-satisfaction:8080
           predicates:
             - Path=/satisfactions/**
+        - id: Call
+          uri: http://admin19-sk-call:8080
+          predicates:
+            - Path=/calls/**
       globalcors:
         corsConfigurations:
           '[/**]':
