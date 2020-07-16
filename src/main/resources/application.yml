@@ -75,6 +75,10 @@ spring:
           uri: http://admin19-sk-notify1:8080
           predicates:
             - Path=
+        - id: Payment
+            uri: http://admin19-sk-satisfaction:8080
+            predicates:
+              - Path=/satisfactions/**
       globalcors:
         corsConfigurations:
           '[/**]':
